@@ -1,0 +1,7 @@
+<div></div> serve para fazer divisoes
+
+
+
+ms-auto: Alinha o conteúdo à direita (margem esquerda automática).
+me-auto: Alinha o conteúdo à esquerda (margem direita automática).
+mx-auto: Alinha o conteúdo ao centro, aplicando margens automáticas em ambos os lados.

@@ -5,3 +5,11 @@
 ms-auto: Alinha o conteúdo à direita (margem esquerda automática).
 me-auto: Alinha o conteúdo à esquerda (margem direita automática).
 mx-auto: Alinha o conteúdo ao centro, aplicando margens automáticas em ambos os lados.
+
+
+FAZER****
+1- Fork do Frontend_students 
+2-Clona o projeto(meu clone/fork)
+3-Na pasta da turma C,criar arquivo chamado: nome.sobrenome == matheus.torrezan.izepe/projeto1/arquivos que criei (nome da pasta). tudo minusculo sem espaço
+4-Commit+Push
+5-Abre o Pull Request

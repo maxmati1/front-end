@@ -1,48 +1,54 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
-    <script src="source.js"></script>
+    <script src="script.js"></script>
 
-    <body>
-        <h1 style="text-align: center;" id="display">Calculadora</h1>
-        
-        <div class="position-relative">
+    <h1 class="text-center">Calculadora</h1>
 
-            <div class="d-grid gap-2 d-md-block">
-                <button class="btn btn-secondary btn-lg" type="button">1</button>
-                <button class="btn btn-secondary btn-lg" type="button">2</button>
-                <button class="btn btn-secondary btn-lg" type="button">3</button>
-                <button class="btn btn-warning btn-lg" type="button">*</button>
+    <div class="d-flex justify-content-center">
+        <div class="input-group input-group-lg w-25">
+            <input type="text" class="form-control text-end" id="tela" readonly>
+        </div>
+    </div>
 
-              </div>
-              <div class="d-grid gap-2 d-md-block">
-                <button class="btn btn-secondary btn-lg" type="button">4</button>
-                <button class="btn btn-secondary btn-lg" type="button">5</button>
-                <button class="btn btn-secondary btn-lg" type="button">6</button>
-                <button class="btn btn-warning btn-lg" type="button">/</button>
+    <div class="d-flex justify-content-center align-items-center vh-99">
+        <div class="card col-sm-3 mb-3 mb-sm-0">
+            <div class="card-body">
 
-              </div>
-              <div class="d-grid gap-2 d-md-block">
-                <button class="btn btn-secondary btn-lg" type="button">7</button>
-                <button class="btn btn-secondary btn-lg" type="button">8</button>
-                <button class="btn btn-secondary btn-lg" type="button">9</button>
-                <button class="btn btn-warning btn-lg" type="button">+</button>
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-secondary btn-lg" onclick="numero('1')">1</button>
+                    <button class="btn btn-secondary btn-lg" onclick="numero('2')">2</button>
+                    <button class="btn btn-secondary btn-lg" onclick="numero('3')">3</button>
+                    <button class="btn btn-warning btn-lg" onclick="numero('*')">*</button>
+                </div>
 
-              </div>
-              <div class="d-grid gap-2 d-md-block">
-                <button class="btn btn-danger btn-lg" type="button">C</button>
-                <button class="btn btn-secondary btn-lg" type="button">0</button>
-                <button class="btn btn-light btn-lg" type="button">=</button>
-                <button class="btn btn-warning btn-lg" type="button">-</button>
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-secondary btn-lg" onclick="numero('4')">4</button>
+                    <button class="btn btn-secondary btn-lg" onclick="numero('5')">5</button>
+                    <button class="btn btn-secondary btn-lg" onclick="numero('6')">6</button>
+                    <button class="btn btn-warning btn-lg" onclick="numero('/')">/</button>
+                </div>
 
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-secondary btn-lg" onclick="numero('7')">7</button>
+                    <button class="btn btn-secondary btn-lg" onclick="numero('8')">8</button>
+                    <button class="btn btn-secondary btn-lg" onclick="numero('9')">9</button>
+                    <button class="btn btn-warning btn-lg" onclick="numero('+')">+</button>
+                </div>
 
-              </div>
-    
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-danger btn-lg" onclick="limpar()">C</button>
+                    <button class="btn btn-secondary btn-lg" onclick="numero('0')">0</button>
+                    <button class="btn btn-light btn-lg" onclick="calcular()">=</button>
+                    <button class="btn btn-warning btn-lg" onclick="numero('-')">-</button>
+                </div>
+
+            </div>
         </div>
     </div>
     
@@ -50,8 +56,7 @@
     
     
     
-    
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
     
     </html>

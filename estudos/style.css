@@ -1,1 +1,27 @@
+body{
+    background-color: azure;
+}
 
+h1{
+    color:green;
+    font-size: large;
+    font-weight: bold;
+}
+h2{
+    font-size: small;
+}
+h3{
+    font-size:larger;
+}
+.vermelho{
+    color:red
+}
+
+.espaço{
+    padding: 20px;
+    margin:30px;
+}
+
+button{
+    border-radius: 90%;
+}

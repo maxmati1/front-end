@@ -17,20 +17,12 @@
     var nome = []
     var idade = []
     var exibir = []
-    var exibirIdade = []
-
-    
+ 
     function adicionar(){
-
         nome = document.getElementById("nomeid").value
         idade = document.getElementById("idadeid").value
-        exibir.push(nome)
-        exibirIdade.push(idade)
-
+        exibir.push({'nome': nome , 'idade': idade})
         console.log(exibir)
-        console.log(exibirIdade)
-
-   
  }
 </script>
 

@@ -12,20 +12,71 @@
     <h3>Idade</h3><input id="idadeid">
     <p></p>
     <button onclick="adicionar()">Adicionar</button>
+    <p></p>
+    <input id="add2">
+    <button onclick="verificar()">Verificar</button>
+    <p></p>
+    <input id="removeid">
+    <button onclick="remover()">Remover</button>
 
-<script>
-    var nome = []
-    var idade = []
-    var exibir = []
- 
-    function adicionar(){
-        nome = document.getElementById("nomeid").value
-        idade = document.getElementById("idadeid").value
-        exibir.push({'nome': nome , 'idade': idade})
-        console.log(exibir)
- }
-</script>
+    <script>
+        var nomes = []
+        var idades = []
+        var exibir = []
 
+        function adicionar() {
+            var nome = document.getElementById("nomeid").value;
+            var idade = document.getElementById("idadeid").value;
+            if (nome && idade) {
+                exibir.push({'nome': nome, 'idade': idade});
+                nomes.push(nome);
+                idades.push(idade);
+                console.log(exibir);
+            } else {
+                alert("Por favor, preencha todos os campos.");
+            }
+        }
+
+        function verificar() {
+            let nomeVerificar = document.getElementById("add2").value;
+            let posic = -1;
+            let encontrado = false;
+            for (let i = 0; i < nomes.length; i++) {
+                if (nomes[i] === nomeVerificar) {
+                    encontrado = true;
+                    posic = i;
+                    break;
+                }
+            }
+
+            if (encontrado) {
+                alert("Valor encontrado na posição: " + posic);
+            } else {
+                alert("Valor não encontrado");
+            }
+        }
+
+        function remover() {
+            let nomeRemover = document.getElementById("removeid").value;
+            let encontrado = false;
+            for (let i = 0; i < nomes.length; i++) {
+                if (nomes[i] === nomeRemover) {
+                    nomes.splice(i, 1);
+                    idades.splice(i, 1);
+                    exibir.splice(i, 1);
+                    encontrado = true;
+                    break;
+                }
+            }
+
+            if (encontrado) {
+                console.log(exibir);
+                alert("Item removido com sucesso!");
+            } else {
+                alert("Nome não encontrado para remoção.");
+            }
+        }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
   </body>

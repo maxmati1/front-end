@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora de IMC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <style>
+        body{
+            background-color: rgb(208, 214, 214);
+        }
+        .card{
+            margin-bottom:50px;
+            margin-top: 30px;
+            border-width: 20px;
+            border-color:rgb(128, 219, 219)
+        }
+        #pesoid, #alturaid{
+            border-color:rgb(128,219,219)
+        }   
+    </style>
+  </head>
+  <body>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            Calculadora de IMC online
+        </div>
+        <div class="card-body">
+            Informe sua altura em cm e seu peso em kg que mostraremos seu imc juntamente com uma escala para classifica-lo! 
+            </div>
+      </div>
+  
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">Peso(ex.70)</span>
+      <input  id ="pesoid"  type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">Altura(ex.1.70)</span>
+      <input id="alturaid" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+
+    <button type="button"  onclick="calcular()" class="btn btn-info">Enviar</button>
+
+    <div class="card">
+        <div id="final" class="card-body">
+            
+        </div>
+        <div id="classific" class="card-body">
+            
+            </div>
+      </div>
+
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <script>
+        function calcular(){
+            let peso = document.getElementById("pesoid").value
+            let altura = document.getElementById("alturaid").value
+            let resultado
+
+            resultado = peso/(altura*altura)
+
+            document.getElementById("final").innerHTML = ("Resultado :"+resultado.toFixed(2))
+
+            if(resultado<18.5){
+                document.getElementById("classific").innerHTML = ("Baixo peso!")
+            }else if(resultado<24.9 && resultado>=18.5){
+                document.getElementById("classific").innerHTML = ("Peso Normal!")
+            }else if(resultado>=25 && resultado<=29.9){
+                document.getElementById("classific").innerHTML = ("Sobrepeso!")
+            }else if(resultado>=30 && resultado<=34.9){
+                document.getElementById("classific").innerHTML = ("Obesidade grau I")
+            }else if(resultado>=35 && resultado<=39.9){
+                document.getElementById("classific").innerHTML = ("Obesidade grau II")
+            }else if(resultado>40){
+                document.getElementById("classific").innerHTML = ("Obesidade grau III")
+            }
+        }
+    </script>
+  </body>
+</html>

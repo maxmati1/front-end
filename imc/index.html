@@ -10,6 +10,10 @@
         body{
             background-color: rgb(208, 214, 214);
         }
+        .card-title{
+            font-weight: bold;
+            margin: 10px;
+        }
         .card{
             margin-bottom:50px;
             margin-top: 30px;
@@ -24,7 +28,7 @@
   <body>
 <div class="container">
     <div class="card">
-        <div class="card-body">
+        <div class="card-title">
             Calculadora de IMC online
         </div>
         <div class="card-body">
@@ -65,7 +69,7 @@
 
             resultado = peso/(altura*altura)
 
-            document.getElementById("final").innerHTML = ("Resultado :"+resultado.toFixed(2))
+            document.getElementById("final").innerHTML = ("Resultado:"+resultado.toFixed(2))
 
             if(resultado<18.5){
                 document.getElementById("classific").innerHTML = ("Baixo peso!")
